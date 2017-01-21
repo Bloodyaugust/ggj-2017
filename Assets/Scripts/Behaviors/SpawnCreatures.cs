@@ -27,6 +27,12 @@ public class SpawnCreatures : MonoBehaviour {
 			if (_playerConfig.Player.GetButtonUp("Spawn0")) {
 				QueueSpawn(0, _targetSelection.GetTarget());
 			}
+			if (_playerConfig.Player.GetButtonUp("Spawn1")) {
+				QueueSpawn(1, _targetSelection.GetTarget());
+			}
+			if (_playerConfig.Player.GetButtonUp("Spawn2")) {
+				QueueSpawn(2, _targetSelection.GetTarget());
+			}
 		}
 	}
 

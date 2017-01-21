@@ -11,8 +11,9 @@ public class CreatureState : MonoBehaviour {
 		Dying
 	};
 
+	public int[] _animations = new int[] {1, 1, 2, 3};
+
 	SpriterAnimator _animator;
-	int[] _animations = new int[] {1, 1, 2, 3};
 	int _lastState = 0;
 	int _currentState = 0;
 	bool _stateChanged = true;

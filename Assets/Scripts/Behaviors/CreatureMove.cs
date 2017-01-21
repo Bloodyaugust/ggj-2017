@@ -22,6 +22,12 @@ public class CreatureMove : MonoBehaviour {
 	void Update () {
 		if (_state.GetState() == (int)CreatureState.States.Moving) {
 			transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, MoveSpeed * Time.deltaTime);
+
+			if (transform.position.x < _target.transform.position.x) {
+				transform.localScale = new Vector3(-1, 1, 1);
+			} else {
+				transform.localScale = new Vector3(1, 1, 1);
+			}
 		}
 	}
 
