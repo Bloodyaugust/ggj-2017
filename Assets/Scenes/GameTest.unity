@@ -98,6 +98,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4647465475654242, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -132,7 +137,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_Name
-      value: Castle (2)
+      value: CastleTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1280548025}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1745819700}
+    - target: {fileID: 114155123914035618, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PlayerID
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55d54e27a28660439b527aeee3af998, type: 2}
@@ -144,6 +164,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4647465475654242, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_LocalPosition.x
       value: 300
@@ -178,7 +203,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_Name
-      value: Castle (1)
+      value: CastleRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 251930654}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1941197349}
+    - target: {fileID: 114155123914035618, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PlayerID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55d54e27a28660439b527aeee3af998, type: 2}
@@ -313,6 +353,39 @@ MonoBehaviour:
       _startingCustomControllers: []
       _assignMouseOnStart: 1
       _excludeFromControllerAutoAssignment: 0
+    - _id: 2
+      _name: Player1
+      _descriptiveName: Player1
+      _startPlaying: 1
+      _defaultJoystickMaps: []
+      _defaultMouseMaps: []
+      _defaultKeyboardMaps: []
+      _defaultCustomControllerMaps: []
+      _startingCustomControllers: []
+      _assignMouseOnStart: 0
+      _excludeFromControllerAutoAssignment: 0
+    - _id: 3
+      _name: Player2
+      _descriptiveName: Player2
+      _startPlaying: 1
+      _defaultJoystickMaps: []
+      _defaultMouseMaps: []
+      _defaultKeyboardMaps: []
+      _defaultCustomControllerMaps: []
+      _startingCustomControllers: []
+      _assignMouseOnStart: 0
+      _excludeFromControllerAutoAssignment: 0
+    - _id: 4
+      _name: Player3
+      _descriptiveName: Player3
+      _startPlaying: 1
+      _defaultJoystickMaps: []
+      _defaultMouseMaps: []
+      _defaultKeyboardMaps: []
+      _defaultCustomControllerMaps: []
+      _startingCustomControllers: []
+      _assignMouseOnStart: 0
+      _excludeFromControllerAutoAssignment: 0
     actions:
     - _id: 0
       _name: TargetSelectX
@@ -332,6 +405,24 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
+    - _id: 2
+      _name: Join
+      _type: 1
+      _descriptiveName: Action0
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 3
+      _name: Spawn0
+      _type: 1
+      _descriptiveName: Action0
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
     actionCategories:
     - _name: Default
       _descriptiveName: Default
@@ -341,7 +432,7 @@ MonoBehaviour:
     actionCategoryMap:
       list:
       - categoryId: 0
-        actionIds: 0000000001000000
+        actionIds: 00000000010000000200000003000000
     inputBehaviors:
     - _id: 0
       _name: Default
@@ -441,11 +532,33 @@ MonoBehaviour:
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 2
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 13
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 3
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 113
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     mouseMaps: []
     customControllerMaps: []
     customControllers: []
-    playerIdCounter: 2
-    actionIdCounter: 2
+    playerIdCounter: 5
+    actionIdCounter: 4
     actionCategoryIdCounter: 1
     inputBehaviorIdCounter: 1
     mapCategoryIdCounter: 1
@@ -486,6 +599,8 @@ GameObject:
   - component: {fileID: 930713178}
   - component: {fileID: 930713177}
   - component: {fileID: 930713182}
+  - component: {fileID: 930713183}
+  - component: {fileID: 930713184}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -572,6 +687,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8f9f73f12141d41a23a5a45c7372f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &930713183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 930713176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954353e44eeb69d469ce49552ee13810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &930713184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 930713176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865f3fca946065147b8862f2bb5a65b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnInterval: 0.5
+  NumSpawns: 2
 --- !u!1001 &1267594596
 Prefab:
   m_ObjectHideFlags: 0
@@ -579,6 +718,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4647465475654242, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_LocalPosition.x
       value: -300
@@ -611,6 +755,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998, type: 2}
+      propertyPath: m_Name
+      value: CastleLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 251930654}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1941197349}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55d54e27a28660439b527aeee3af998, type: 2}
   m_IsPrefabParent: 0
@@ -619,33 +777,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998,
     type: 2}
   m_PrefabInternal: {fileID: 1267594596}
---- !u!114 &1280548028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1280548025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd17be107baa9948b2c645f6a7357df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PossibleTargets:
-  - {fileID: 251930654}
-  - {fileID: 1941197349}
-  _target: {fileID: 0}
---- !u!114 &1280548029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1280548025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7f9ec29dd19749a26fbcdce662c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerID: 0
+--- !u!1 &1745819700 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998,
+    type: 2}
+  m_PrefabInternal: {fileID: 34577598}
 --- !u!1 &1941197349 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998,
@@ -658,6 +794,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4647465475654242, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -692,7 +833,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1065844302375218, guid: b55d54e27a28660439b527aeee3af998, type: 2}
       propertyPath: m_Name
-      value: Castle (3)
+      value: CastleBottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1280548025}
+    - target: {fileID: 114855137397276182, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PossibleTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1745819700}
+    - target: {fileID: 114155123914035618, guid: b55d54e27a28660439b527aeee3af998,
+        type: 2}
+      propertyPath: PlayerID
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b55d54e27a28660439b527aeee3af998, type: 2}

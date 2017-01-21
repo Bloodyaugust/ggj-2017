@@ -20,6 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4647465475654242}
   - component: {fileID: 212122077494933530}
+  - component: {fileID: 114925320298704570}
+  - component: {fileID: 114855137397276182}
+  - component: {fileID: 114155123914035618}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Castle
@@ -40,6 +43,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114155123914035618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065844302375218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f9ec29dd19749a26fbcdce662c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerID: 0
+--- !u!114 &114855137397276182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065844302375218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd17be107baa9948b2c645f6a7357df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PossibleTargets: []
+--- !u!114 &114925320298704570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065844302375218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abc9484a7db32d43bb9074bba11833a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreaturePrefabs:
+  - {fileID: 1704925591430104, guid: 4d6082c03769e2c419e807d61c39029d, type: 2}
 --- !u!212 &212122077494933530
 SpriteRenderer:
   m_ObjectHideFlags: 1

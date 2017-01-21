@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JellyfishState : MonoBehaviour {
+public class CreatureState : MonoBehaviour {
 
 	public enum States {
 		Idle,
