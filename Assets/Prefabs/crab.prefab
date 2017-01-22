@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackDamage: 1
   AttackInterval: 0.5
-  AttackRange: 5
+  AttackRange: 10
 --- !u!212 &212038237907959202
 SpriteRenderer:
   m_ObjectHideFlags: 1
