@@ -61,6 +61,7 @@ public class SpawnCreatures : MonoBehaviour {
 		GameObject newCreature;
 		for (int i = 0; i < _spawns; i++) {
 			newCreature = Instantiate(CreaturePrefabs[_queuedSpawnTypes[i]], transform.position + new Vector3(Random.value, Random.value, 0), Quaternion.identity);
+			newCreature.transform.position = newCreature.transform.position - new Vector3(0, 6, 0);
 			newCreature.GetComponent<CreatureMove>().SetTarget(_queuedSpawnTargets[i]);
 			newCreature.GetComponent<PlayerConfig>().SetPlayerID(_ownerID);
 		}

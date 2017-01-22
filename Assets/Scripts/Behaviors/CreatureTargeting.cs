@@ -6,6 +6,8 @@ public class CreatureTargeting : MonoBehaviour {
 
 	GameObject _currentTarget;
 	PlayerConfig _playerConfig;
+	float _reacquireInterval = 0.5f;
+	float _timeToReacquire = 0.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +16,10 @@ public class CreatureTargeting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (_currentTarget == null) {
+		_timeToReacquire -= Time.deltaTime;
+		if (_currentTarget == null || _timeToReacquire <= 0) {
 			AcquireTarget();
+			_timeToReacquire = _reacquireInterval;
 		}
 	}
 
