@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292281c1900a971468a0e3380cfcf24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDamage: 4
+  AttackDamage: 3
   AttackInterval: 1
   AttackRange: 10
 --- !u!114 &114164252026331838
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef02c288d3fda5f4a9ed6ac4011b037d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 6
+  MoveSpeed: 8
 --- !u!114 &114194540066370602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8285c840904d8428fb8009033cca4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 6
+  MaxHealth: 7
 --- !u!114 &114390783907001702
 MonoBehaviour:
   m_ObjectHideFlags: 1
