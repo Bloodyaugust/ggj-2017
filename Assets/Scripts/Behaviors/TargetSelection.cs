@@ -6,6 +6,7 @@ using Rewired;
 public class TargetSelection : MonoBehaviour {
 
 	public GameObject[] PossibleTargets;
+	public GameObject Arrow;
 
 	GameObject _target;
 	PlayerConfig _playerConfig;
@@ -32,6 +33,8 @@ public class TargetSelection : MonoBehaviour {
 				}
 			}
 		}
+
+		Arrow.transform.right = _target.transform.position - Arrow.transform.position;
 	}
 
 	public GameObject GetTarget () {
