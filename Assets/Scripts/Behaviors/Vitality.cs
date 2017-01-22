@@ -39,4 +39,8 @@ public class Vitality : MonoBehaviour {
 			}
 		}
 	}
+
+	public float GetHealth () {
+		return _health;
+	}
 }

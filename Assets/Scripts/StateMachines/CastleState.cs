@@ -11,18 +11,23 @@ public class CastleState : MonoBehaviour {
 		Dying
 	};
 
+	public GameObject HealthBar;
+
+	Vitality _vitality;
+	FillingBar _healthBar;
 	int _lastState = 0;
 	int _currentState = 0;
 	bool _stateChanged = true;
 
 	// Use this for initialization
 	void Start () {
-
+		_healthBar = HealthBar.GetComponent<FillingBar>();
+		_vitality = GetComponent<Vitality>();
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		_healthBar.barDisplay = _vitality.GetHealth() / _vitality.MaxHealth;
 	}
 
 	void LateUpdate () {
