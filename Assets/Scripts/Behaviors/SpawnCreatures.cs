@@ -37,7 +37,8 @@ public class SpawnCreatures : MonoBehaviour {
 			}
 		} else {
 			if (_spawns < _spawnsTotal) {
-				QueueSpawn(Random.Range(0, CreaturePrefabs.Length), _targetSelection.PossibleTargets[Random.Range(0, _targetSelection.PossibleTargets.Length)]);
+				_targetSelection.SwitchTarget();
+				QueueSpawn(Random.Range(0, CreaturePrefabs.Length), _targetSelection.GetTarget());
 			}
 		}
 	}
