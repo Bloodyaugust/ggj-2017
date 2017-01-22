@@ -6,8 +6,8 @@ public class CreatureTargeting : MonoBehaviour {
 
 	GameObject _currentTarget;
 	PlayerConfig _playerConfig;
-	float _reacquireInterval = 0.5f;
-	float _timeToReacquire = 0.5f;
+	float _reacquireInterval = 0.05f;
+	float _timeToReacquire = 0.05f;
 
 	// Use this for initialization
 	void Start () {
