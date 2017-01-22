@@ -20,13 +20,21 @@ public class CreatureMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		Vector3 newScale;
+
 		if (_state.GetState() == (int)CreatureState.States.Moving) {
 			transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, MoveSpeed * Time.deltaTime);
 
 			if (transform.position.x < _target.transform.position.x) {
-				transform.localScale = new Vector3(-1, 1, 1);
+				newScale = transform.localScale;
+
+				newScale.x = -1 * Mathf.Abs(newScale.x);
+				transform.localScale = newScale;
 			} else {
-				transform.localScale = new Vector3(1, 1, 1);
+				newScale = transform.localScale;
+
+				newScale.x = Mathf.Abs(newScale.x);
+				transform.localScale = newScale;
 			}
 		}
 	}

@@ -48,6 +48,10 @@ public class SpriterAnimator : MonoBehaviour
         Text.text = "Variables:\n" + GetVarValues() + "\nTags:\n" + GetTagValues();
     }
 
+    public float GetAnimationProgress() {
+      return animator.Progress;
+    }
+
     public void SwitchAnimation(int offset)
     {
       animator.Play(GetAnimation(animator, offset));

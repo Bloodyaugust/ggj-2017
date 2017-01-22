@@ -20,3 +20,5 @@ MonoBehaviour:
     ID: 0
   - Name: 68656c6c6f
     ID: 0
+  - Name: Targetable
+    ID: 0

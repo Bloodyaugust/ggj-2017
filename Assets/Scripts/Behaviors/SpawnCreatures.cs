@@ -33,6 +33,10 @@ public class SpawnCreatures : MonoBehaviour {
 			if (_playerConfig.Player.GetButtonUp("Spawn2")) {
 				QueueSpawn(2, _targetSelection.GetTarget());
 			}
+		} else {
+			if (_spawns < _spawnsTotal) {
+				QueueSpawn(Random.Range(0, CreaturePrefabs.Length), _targetSelection.PossibleTargets[Random.Range(0, _targetSelection.PossibleTargets.Length)]);
+			}
 		}
 	}
 
@@ -56,7 +60,7 @@ public class SpawnCreatures : MonoBehaviour {
 	public void Spawn () {
 		GameObject newCreature;
 		for (int i = 0; i < _spawns; i++) {
-			newCreature = Instantiate(CreaturePrefabs[_queuedSpawnTypes[i]], transform.position, Quaternion.identity);
+			newCreature = Instantiate(CreaturePrefabs[_queuedSpawnTypes[i]], transform.position + new Vector3(Random.value, Random.value, 0), Quaternion.identity);
 			newCreature.GetComponent<CreatureMove>().SetTarget(_queuedSpawnTargets[i]);
 			newCreature.GetComponent<PlayerConfig>().SetPlayerID(_ownerID);
 		}

@@ -176,6 +176,10 @@ GameObject:
   - component: {fileID: 114541605241438774}
   - component: {fileID: 114390783907001702}
   - component: {fileID: 114908525309934858}
+  - component: {fileID: 114813088272103322}
+  - component: {fileID: 114194540066370602}
+  - component: {fileID: 114320300660872946}
+  - component: {fileID: 114033973363979252}
   m_Layer: 0
   m_Name: shark
   m_TagString: Untagged
@@ -629,7 +633,7 @@ Transform:
   m_GameObject: {fileID: 1541365946621882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4304014205170682}
   - {fileID: 4635025536380158}
@@ -662,6 +666,20 @@ Transform:
   m_Father: {fileID: 4741902386885602}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114033973363979252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541365946621882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292281c1900a971468a0e3380cfcf24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackDamage: 1
+  AttackInterval: 0.5
+  AttackRange: 5
 --- !u!114 &114164252026331838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -674,6 +692,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 4
+--- !u!114 &114194540066370602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541365946621882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90af9d989e2f9d48bcd12e8c4b872e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114320300660872946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541365946621882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8285c840904d8428fb8009033cca4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
 --- !u!114 &114390783907001702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -765,6 +806,20 @@ MonoBehaviour:
   EntityIndex: 0
   SpriterData: {fileID: 11400000, guid: 5fca8396755747a4e8dcc94b68b549bf, type: 2}
   UseNativeTags: 1
+--- !u!114 &114813088272103322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541365946621882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5812814b7685642dbad1c7b3dd6e5abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localTagList:
+  - Name: Targetable
+    ID: 0
 --- !u!114 &114908525309934858
 MonoBehaviour:
   m_ObjectHideFlags: 1

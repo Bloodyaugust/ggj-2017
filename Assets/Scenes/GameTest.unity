@@ -737,8 +737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865f3fca946065147b8862f2bb5a65b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnInterval: 0.5
-  NumSpawns: 2
+  SpawnInterval: 5
+  NumSpawns: 3
 --- !u!1001 &1267594596
 Prefab:
   m_ObjectHideFlags: 0
