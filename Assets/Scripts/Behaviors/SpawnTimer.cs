@@ -25,8 +25,9 @@ public class SpawnTimer : MonoBehaviour {
 		_timeToSpawn -= Time.deltaTime;
 
 		if (_timeToSpawn <= 0) {
+			_castles = GameObject.FindGameObjectsWithTag("Castle");
 			_timeToSpawn = SpawnInterval;
-			
+
 			for (int i = 0; i < _castles.Length; i++) {
 				_castles[i].GetComponent<SpawnCreatures>().Spawn();
 				_castles[i].GetComponent<SpawnCreatures>().SetSpawns(NumSpawns);
