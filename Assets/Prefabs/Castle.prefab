@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114475875686569946}
   - component: {fileID: 114917899253620860}
   - component: {fileID: 114831764182270436}
+  - component: {fileID: 114868971625983054}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Castle
@@ -83,6 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360289e1ecdc8274c8b444a482b8ae56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthBar: {fileID: 0}
 --- !u!114 &114855137397276182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +97,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PossibleTargets: []
+--- !u!114 &114868971625983054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065844302375218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ab845e121bd574ca5aac32620e7218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clams: []
 --- !u!114 &114917899253620860
 MonoBehaviour:
   m_ObjectHideFlags: 1

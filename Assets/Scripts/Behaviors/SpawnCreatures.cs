@@ -6,6 +6,7 @@ public class SpawnCreatures : MonoBehaviour {
 
 	public GameObject[] CreaturePrefabs;
 
+	AvailableSpawns _availableSpawns;
 	GameObject[] _queuedSpawnTargets;
 	PlayerConfig _playerConfig;
 	TargetSelection _targetSelection;
@@ -16,6 +17,7 @@ public class SpawnCreatures : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		_availableSpawns = GetComponent<AvailableSpawns>();
 		_playerConfig = GetComponent<PlayerConfig>();
 		_ownerID = _playerConfig.PlayerID;
 		_targetSelection = GetComponent<TargetSelection>();
@@ -46,12 +48,16 @@ public class SpawnCreatures : MonoBehaviour {
 
 		_queuedSpawnTypes = new int[numSpawns];
 		_queuedSpawnTargets = new GameObject[numSpawns];
+
+		_availableSpawns.ShowClams();
 	}
 
 	public void QueueSpawn (int creatureType, GameObject target) {
 		if (_spawns < _spawnsTotal) {
 			_queuedSpawnTypes[_spawns] = creatureType;
 			_queuedSpawnTargets[_spawns] = target;
+
+			_availableSpawns.HideClam(_spawns);
 
 			_spawns++;
 		}
