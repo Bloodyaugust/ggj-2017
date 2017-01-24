@@ -11,9 +11,11 @@ public class CreatureState : MonoBehaviour {
 		Dying
 	};
 
+	public GameObject DeathEffectPrefab;
 	public int[] _animations = new int[] {1, 1, 2, 3};
 
 	SpriterAnimator _animator;
+	float _deathTime = 1;
 	int _lastState = 0;
 	int _currentState = 0;
 	bool _stateChanged = true;
@@ -33,9 +35,14 @@ public class CreatureState : MonoBehaviour {
 			_stateChanged = false;
 
 			_animator.SetAnimation(_animations[_currentState]);
+		}
 
-			if (_currentState == (int)States.Dying) {
-				Destroy(gameObject, 1);
+		if (_currentState == (int)States.Dying) {
+			_deathTime -= Time.deltaTime;
+
+			if (_deathTime <= 0) {
+				Instantiate(DeathEffectPrefab, transform.position, Quaternion.identity);
+				Destroy(gameObject);
 			}
 		}
 	}
