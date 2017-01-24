@@ -385,6 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9addf151349f25c41bbc631741168d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathEffectPrefab: {fileID: 0}
   _animations: 01000000010000000100000001000000
 --- !u!212 &212392946851755654
 SpriteRenderer:

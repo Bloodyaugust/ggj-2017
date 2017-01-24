@@ -677,6 +677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292281c1900a971468a0e3380cfcf24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackSounds:
+  - {fileID: 8300000, guid: 7f59e0d6f87a04b9c9eaf8dc65ef1f4f, type: 3}
   AttackDamage: 3
   AttackInterval: 1
   AttackRange: 10
@@ -726,6 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9addf151349f25c41bbc631741168d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathEffectPrefab: {fileID: 1695032734759448, guid: 071543d5b5ea4bf4e83919d950788cc2,
+    type: 2}
   _animations: 01000000010000000200000003000000
 --- !u!114 &114541605241438774
 MonoBehaviour:

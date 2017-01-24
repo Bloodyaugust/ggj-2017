@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d76387fb7fa143a79fd17323ce9c36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EffectSounds: []
   PlayTime: 1
 --- !u!114 &114429520804747030
 MonoBehaviour:
