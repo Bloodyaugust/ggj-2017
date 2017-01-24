@@ -5,4 +5,8 @@ Library/
 Assets/AssetStoreTools*
 *.exe
 seapremacy_Data
-Gamestrap*
+*.DS_Store
+*.csproj
+*.sln
+*.userprefs
+*.app
