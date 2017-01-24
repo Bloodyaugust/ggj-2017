@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour {
 
+	public AudioClip[] AttackSounds;
 	public float AttackDamage;
 	public float AttackInterval;
 	public float AttackRange;
@@ -42,6 +43,7 @@ public class Attack : MonoBehaviour {
 			_currentTarget.GetComponent<Vitality>().Damage(AttackDamage);
 
 			_timeToAttack = AttackInterval;
+			AudioSource.PlayClipAtPoint(AttackSounds[Random.Range(0, AttackSounds.Length)], transform.position);
 		}
 	}
 }
