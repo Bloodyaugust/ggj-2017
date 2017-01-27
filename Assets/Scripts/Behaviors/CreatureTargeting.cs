@@ -4,44 +4,46 @@ using UnityEngine;
 
 public class CreatureTargeting : MonoBehaviour {
 
-	GameObject _currentTarget;
+	List<GameObject> _potentialTargets;
+	public GameObject _currentTarget;
 	PlayerConfig _playerConfig;
-	float _reacquireInterval = 0.05f;
-	float _timeToReacquire = 0.05f;
 
 	// Use this for initialization
 	void Start () {
 		_playerConfig = GetComponent<PlayerConfig>();
+		_potentialTargets = new List<GameObject>();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		_timeToReacquire -= Time.deltaTime;
-		if (_currentTarget == null || _timeToReacquire <= 0) {
-			AcquireTarget();
-			_timeToReacquire = _reacquireInterval;
+
+	}
+
+	void OnTriggerEnter2D (Collider2D otherCollider) {
+		if (otherCollider.GetComponent<PlayerConfig>().PlayerID != _playerConfig.PlayerID) {
+			_potentialTargets.Add(otherCollider.gameObject);
 		}
+	}
+	void OnTriggerExit2D (Collider2D otherCollider) {
+		_potentialTargets.Remove(otherCollider.gameObject);
 	}
 
 	void AcquireTarget () {
 		float currentDistance = 9999999999;
-		GameObject[] potentialTargets = MultiTags.FindGameObjectsWithMultiTag("Targetable");
 
-		for (int i = 0; i < potentialTargets.Length; i++) {
-			if (potentialTargets[i].GetComponent<PlayerConfig>().PlayerID == _playerConfig.PlayerID) {
-				continue;
-			}
-			if (Vector3.Distance(potentialTargets[i].transform.position, transform.position) < currentDistance) {
-				_currentTarget = potentialTargets[i];
-				currentDistance = Vector3.Distance(potentialTargets[i].transform.position, transform.position);
+		_potentialTargets.RemoveAll(item => item == null);
+
+		for (int i = 0; i < _potentialTargets.Count; i++) {
+			if (Vector3.Distance(_potentialTargets[i].transform.position, transform.position) < currentDistance) {
+				_currentTarget = _potentialTargets[i];
+				currentDistance = Vector3.Distance(_potentialTargets[i].transform.position, transform.position);
 			}
 		}
 	}
 
 	public GameObject GetCurrentTarget () {
-		if (_currentTarget == null) {
-			AcquireTarget();
-		}
+		AcquireTarget();
+
 		return _currentTarget;
 	}
 }

@@ -8,7 +8,7 @@ public class Vitality : MonoBehaviour {
 
 	CastleState _castleState;
 	CreatureState _creatureState;
-	float _health;
+	public float _health;
 
 	// Use this for initialization
 	void Start () {

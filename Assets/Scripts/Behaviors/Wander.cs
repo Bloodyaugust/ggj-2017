@@ -12,8 +12,8 @@ public class Wander : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_wanderPoints = new Vector3[2];
-		_wanderPoints[0] = new Vector3(-125, transform.position.y, 0);
-		_wanderPoints[1] = new Vector3(125, transform.position.y, 0);
+		_wanderPoints[0] = new Vector3(-150, transform.position.y, 0);
+		_wanderPoints[1] = new Vector3(150, transform.position.y, 0);
 	}
 
 	// Update is called once per frame

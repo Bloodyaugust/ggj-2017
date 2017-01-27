@@ -17,7 +17,7 @@ public class CreatureState : MonoBehaviour {
 	SpriterAnimator _animator;
 	float _deathTime = 1;
 	int _lastState = 0;
-	int _currentState = 0;
+	public int _currentState = 0;
 	bool _stateChanged = true;
 
 	// Use this for initialization

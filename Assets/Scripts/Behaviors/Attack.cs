@@ -18,18 +18,17 @@ public class Attack : MonoBehaviour {
 	void Start () {
 		_creatureState = GetComponent<CreatureState>();
 		_creatureTargeting = GetComponent<CreatureTargeting>();
+
+		GetComponent<CircleCollider2D>().radius = AttackRange / transform.localScale.x;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (_creatureState.GetState() != (int)CreatureState.States.Dying) {
-			if (_currentTarget == null) {
-				_currentTarget = _creatureTargeting.GetCurrentTarget();
-			}
-
+			_currentTarget = _creatureTargeting.GetCurrentTarget();
 			_timeToAttack -= Time.deltaTime;
 
-			if (Vector3.Distance(_currentTarget.transform.position, transform.position) <= AttackRange) {
+			if (_currentTarget != null && Vector3.Distance(_currentTarget.transform.position, transform.position) < AttackRange) {
 				DoAttack();
 				_creatureState.SetState((int)CreatureState.States.Attacking);
 			} else {

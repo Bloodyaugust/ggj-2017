@@ -42,8 +42,7 @@ public class TargetSelection : MonoBehaviour {
 			float xAim = _playerConfig.Player.GetAxis("TargetSelectX");
 			float yAim = _playerConfig.Player.GetAxis("TargetSelectY");
 			Vector3 totalAim = new Vector3(xAim * 100, yAim * 100, 0);
-
-			Debug.Log(Mathf.Abs(yAim + xAim));
+			
 			if (Mathf.Abs(yAim + xAim) >= 0.2f) {
 				for (int i = 0; i < _possibleTargets.Length; i++) {
 					if (_possibleTargets[i].GetComponent<PlayerConfig>().PlayerID == _playerConfig.PlayerID) {
