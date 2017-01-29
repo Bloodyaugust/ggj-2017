@@ -24,10 +24,9 @@ public class TargetSelection : MonoBehaviour {
 	void Update () {
 		Vector3 targetVector;
 		bool foundTarget = false;
+		_possibleTargets = GameObject.FindGameObjectsWithTag("Castle");
 
 		if (_target == null && _possibleTargets.Length != 1) {
-			_possibleTargets = GameObject.FindGameObjectsWithTag("Castle");
-
 			while (!foundTarget) {
 				_target = _possibleTargets[Random.Range(0, _possibleTargets.Length)];
 
@@ -42,7 +41,7 @@ public class TargetSelection : MonoBehaviour {
 			float xAim = _playerConfig.Player.GetAxis("TargetSelectX");
 			float yAim = _playerConfig.Player.GetAxis("TargetSelectY");
 			Vector3 totalAim = new Vector3(xAim * 100, yAim * 100, 0);
-			
+
 			if (Mathf.Abs(yAim + xAim) >= 0.2f) {
 				for (int i = 0; i < _possibleTargets.Length; i++) {
 					if (_possibleTargets[i].GetComponent<PlayerConfig>().PlayerID == _playerConfig.PlayerID) {
