@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnCreatures : MonoBehaviour {
 
 	public GameObject[] CreaturePrefabs;
+	public int NumSpawns;
 
 	AvailableSpawns _availableSpawns;
 	GameObject[] _queuedSpawnTargets;
@@ -13,7 +14,6 @@ public class SpawnCreatures : MonoBehaviour {
 	int[] _queuedSpawnTypes;
 	int _ownerID;
 	int _spawns = 0;
-	int _spawnsTotal = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -36,25 +36,24 @@ public class SpawnCreatures : MonoBehaviour {
 				QueueSpawn(2, _targetSelection.GetTarget());
 			}
 		} else {
-			if (_spawns < _spawnsTotal) {
+			if (_spawns < NumSpawns) {
 				_targetSelection.SwitchTarget();
 				QueueSpawn(Random.Range(0, CreaturePrefabs.Length), _targetSelection.GetTarget());
 			}
 		}
 	}
 
-	public void SetSpawns (int numSpawns) {
-		_spawnsTotal = numSpawns;
+	public void SetSpawns () {
 		_spawns = 0;
 
-		_queuedSpawnTypes = new int[numSpawns];
-		_queuedSpawnTargets = new GameObject[numSpawns];
+		_queuedSpawnTypes = new int[NumSpawns];
+		_queuedSpawnTargets = new GameObject[NumSpawns];
 
 		_availableSpawns.ShowClams();
 	}
 
 	public void QueueSpawn (int creatureType, GameObject target) {
-		if (_spawns < _spawnsTotal) {
+		if (_spawns < NumSpawns) {
 			_queuedSpawnTypes[_spawns] = creatureType;
 			_queuedSpawnTargets[_spawns] = target;
 

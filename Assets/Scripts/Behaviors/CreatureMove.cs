@@ -60,6 +60,12 @@ public class CreatureMove : MonoBehaviour {
 				newScale.x = Mathf.Abs(newScale.x);
 				transform.localScale = newScale;
 			}
+
+			if (transform.position == _target.transform.position) {
+				_target.GetComponent<Vitality>().Damage(1);
+
+				_state.SetState((int)CreatureState.States.Dying);
+			}
 		}
 	}
 
